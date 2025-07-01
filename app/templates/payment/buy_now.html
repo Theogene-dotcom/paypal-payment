@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Complete Your Purchase</h1>
+  <p>Order ID: {{ order_id }}</p>
+  <p>Amount: ${{ price }}</p>
+  
+  <div class="paypal-button">
+    {{ form.render }}
+  </div>
+  
+  <p><a href="{% url 'payment_failed' %}">Cancel Payment</a></p>
+{% endblock %}
